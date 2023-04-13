@@ -1,0 +1,18 @@
+<%- include partials/header.ejs %>
+
+<h1>Home</h1>
+<p><%=homeStartingContent%></p>
+
+<% console.log(myPosts); %>
+
+<% myPosts.forEach(post => { %>
+
+    <h1><%=post.title%></h1> 
+    
+    
+    <p><%=post.body.substring(0, 200) + " ... "%><a href="/post/<%=post.title%>">Read more</a></p>
+    
+    
+<%   }); %>
+
+<%- include partials/footer.ejs %>
